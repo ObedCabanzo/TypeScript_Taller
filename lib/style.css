@@ -1,0 +1,26 @@
+.title
+{
+    
+    font-size: 35px;
+    background-color: cornflowerblue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+.icon
+{
+    position: relative;
+    right: 200px;
+    top:10px;
+    float: right;
+    
+}
+
+.subtitle
+{
+    position: relative;
+    left: 100px;
+
+}
+#accordionFlushExample
+{
+    margin: 100px ;
+}
