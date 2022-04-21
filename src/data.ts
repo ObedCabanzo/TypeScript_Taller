@@ -1,6 +1,7 @@
 //Crea y llena una lista de series con los datos dados
-let series: Serie[] = [] ;
-let serie1 : Serie = new Serie (1,"Breaking Bad","AMC", 5, "Set and filmed in Albuquerque, New Mexico, the series tells the story of Walter White, a struggling and depressed high school chemistry teacher who is diagnosed with lung cancer" ,
+
+
+let serie1: Serie = new Serie (1,"Breaking Bad","AMC", 5, "Set and filmed in Albuquerque, New Mexico, the series tells the story of Walter White, a struggling and depressed high school chemistry teacher who is diagnosed with lung cancer" ,
 "https://www.amc.com/shows/breaking-bad","https://i.imgur.com/GGje0vc.jpg") ;
 let serie2 : Serie = new Serie (2,"Orange Is the New Black", "Netflix", 6,  "The series begins revolving around Piper Chapman, a woman in her thirties living in New York City who is sentenced to 15 months in Litchfield Penitentiary", 
 "https://www.netflix.com/co/title/70242311","https://i.imgur.com/EvKe48G.jpg");
@@ -13,12 +14,7 @@ let serie5 : Serie = new Serie (5, "Sherlock", "BBC",  4 ,  "Sherlock depicts co
 let serie6 : Serie = new Serie (6, "A Very English Scandal", "BBC", 2, "A Very English Scandal is a fact-based three-part British television comedy-drama miniseries based on John Preston's book of the same name.",
 "https://www.bbc.co.uk/programmes/p065smy4", "https://i.imgur.com/D4y3DrQ.jpg");
 
-series.push(serie1);
-series.push(serie2);
-series.push(serie3);
-series.push(serie4);
-series.push(serie5);
-series.push(serie6);
+let series: Serie[] = [serie1,serie2,serie3,serie4,serie5,serie6] ;
 
 
 let i : number = 0;
