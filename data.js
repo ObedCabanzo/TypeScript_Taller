@@ -13,7 +13,8 @@ series.push(serie4);
 series.push(serie5);
 series.push(serie6);
 let i = 0;
-var rowsNode = document.getElementById("rows");
+var rowsNode1 = document.getElementById("rowsTable");
+let seasonsNumber = 0;
 while (i < series.length) {
     let serie = series[i];
     let attributes = serie.darSerie();
@@ -21,8 +22,12 @@ while (i < series.length) {
     let name = attributes[1];
     let channel = attributes[2];
     let seasons = attributes[3];
+    seasonsNumber += seasons;
     let row = '<th scope="row"> ' + id + '</th>' + '<td> ' + name + ' </td>'
         + '<td> ' + channel + ' </td>' + '<td> ' + seasons + ' </td>';
-    rowsNode.insertAdjacentHTML('afterend', row);
+    rowsNode1.insertAdjacentHTML('afterend', row);
     i++;
 }
+var rowsNode1 = document.getElementById("row2");
+let seasonsAverage = seasonsNumber / series.length;
+rowsNode1.insertAdjacentHTML('afterend', '<p>El promedio de temporadas es: ' + seasonsAverage + ' </p>');

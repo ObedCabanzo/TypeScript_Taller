@@ -1,4 +1,4 @@
-
+//Crea y llena una lista de series con los datos dados
 let series: Serie[] = [] ;
 let serie1 : Serie = new Serie (1,"Breaking Bad","AMC", 5, "Set and filmed in Albuquerque, New Mexico, the series tells the story of Walter White, a struggling and depressed high school chemistry teacher who is diagnosed with lung cancer" ,
 "https://www.amc.com/shows/breaking-bad","https://i.imgur.com/GGje0vc.jpg") ;
@@ -22,7 +22,10 @@ series.push(serie6);
 
 
 let i : number = 0;
-var rowsNode : HTMLElement | null = document.getElementById("rows")!;
+var rowsNode : HTMLElement | null = document.getElementById("rowsTable")!;
+let seasonsNumber : number = 0;
+
+// Para cada serie en la lista, extrae sus elementos y los inserta como una nueva fila de la tabla
 while( i < series.length)
 {
      let serie : Serie = series[i];
@@ -32,12 +35,21 @@ while( i < series.length)
      let channel : any = attributes[2];
      let seasons : any = attributes[3];
 
+     seasonsNumber += seasons;
+
      let row : string = '<th scope="row"> '+ id + '</th>' + '<td> ' + name +' </td>' 
                         + '<td> ' + channel+' </td>' + '<td> ' + seasons +' </td>'; 
      rowsNode.insertAdjacentHTML('afterend', row);
 
     i++;
 }
+
+//Despliega la fila que muestra el numero promedio de temporadas
+
+var rowsNode1 : HTMLElement | null = document.getElementById("row2")!
+let seasonsAverage : number = seasonsNumber / series.length;
+rowsNode1.insertAdjacentHTML('afterend', '<p>El promedio de temporadas es: ' + seasonsAverage + ' </p>');
+
 
 
 
