@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Serie = void 0;
 class Serie {
     constructor(id, name, channel, seasons, description, link, photo) {
         this.id = id;
@@ -21,3 +23,4 @@ class Serie {
         return elements;
     }
 }
+exports.Serie = Serie;
